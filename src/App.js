@@ -1,23 +1,16 @@
-import logo from './logo.svg';
 import './App.css';
+import BucketList from './BucketList';
+import { CategoryFilter } from './CategoryFilter';
+import Login from './Login';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Login/>
+      <CategoryFilter />
+      <div>Cheap Thrills</div>
+      <p>Share your thrilling experiences and desires</p>
+      <BucketList />
     </div>
   );
 }

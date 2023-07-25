@@ -1,8 +1,16 @@
 import { render, screen } from '@testing-library/react';
 import App from './App';
+import Login from './Login';
+import BucketList from './BucketList';
 
-test('renders learn react link', () => {
-  render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
-});
+test('renders login here', () => {
+  render(<Login />)
+  const loginHere = screen.getByText('Login Here')
+  expect(loginHere).toBeInTheDocument()
+})
+
+test('renders Tick off Bucket List', () => {
+  render(<BucketList />)
+  const bucketList = screen.getByText('Add to Bucket List')
+  expect(bucketList).toBeInTheDocument();
+})
